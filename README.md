@@ -18,22 +18,23 @@
 
 # Introduction
 
-Built using [AR.js](https://github.com/AR-js-org/AR.js), we aim at developing an Augmented Reality Experience that not only lets you interact with 3D models but guides you through the whole workflow from advertising to purchasing, creating a unique WebAR shopping experience on the scan of a QR code. 
+Built using [AR.js](https://github.com/AR-js-org/AR.js), we aim at developing an Augmented Reality Experience that not only lets you interact with 3D models but guides you through the whole workflow from advertising to purchasing, creating a unique WebAR shopping experience on the scan of a QR code.  
+[Project WebAR | Demo Video](https://youtu.be/OmBQYGPB4Ys)
   
 - - -
   
 # Steps
 1. **Scan the QR code**: At a mall that supports cashless transactions, which is essential these days, the customer can interact and enjoy WebAR experiences that aim to advertise the products via WebAR and purchase them. To do so, the customer has first to scan the QR code, just as the one shown below.
     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./Images%20and%20QR%20codes/main-qr-code.png" height="200px"></img> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./public/Images%20and%20QR%20codes/main-qr-code.png" height="200px"></img> 
   
 2. **Enter the AR World**: After one has scanned the QR code, they get redirected to our web app. One needs to give camera permissions, and then they are all set to watch for markers and have fun with AR.  
   
 3. **On Marker detection**: The markers can either be showcased inside the QR code or separately as shown below (showing full-size image, so you get a better demonstration if you're following along): 
     
-![](./Images%20and%20QR%20codes/fifa.png)
-![](./Images%20and%20QR%20codes/reebok.png)
-![](./Images%20and%20QR%20codes/iphone.png)  
+![](./public/Images%20and%20QR%20codes/fifa.png)
+![](./public/Images%20and%20QR%20codes/reebok.png)
+![](./public/Images%20and%20QR%20codes/iphone.png)  
   
 4. **Payment Option**: Every time a new marker gets detected, the payment options come along with the AR models, making the workflow from advertising to purchase an essential keypoint for our web app.
      
@@ -114,7 +115,6 @@ handleScale(event) {
 
 **AR**ifying the shops and malls with our solution will work as a catalyst to lure the customers into loading up an AR on their phone and interact with it and make them more interested in the purchase. Also, we don't want the buyers to keep searching over a catalog in AR then adding to buy finally. That would become like an online shopping site but in AR. We want to reduce the UI to give them a one-tap buying solution, so the AR guides the whole workflow for the purchase with a clever UX.
   
-![](https://i.ibb.co/37hqBth/pngaaa-com-1761516.png)
 - - -
 # Contributing
 
@@ -135,4 +135,6 @@ npm start
 * **Commit** changes to your own branch
 * **Push** your work and create a pull request
 
-NOTE: Be sure to merge the latest from "upstream"!!
+NOTE: Be sure to merge the latest from "upstream"!!  
+    
+![](https://i.ibb.co/37hqBth/pngaaa-com-1761516.png)

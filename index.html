@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+     <meta charset="utf-8">
+     <title>Project WebAR</title>	
      <link rel="stylesheet" href="css/style.css">
      <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.1.1/aframe-ar.min.js"></script>
@@ -8,6 +11,7 @@
      <script src="js/script.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
      <link rel="stylesheet" href="css/particles.css">
+     </head>
      <script>
           AFRAME.registerComponent('registerevents', {
 		init: function () {
@@ -73,9 +77,9 @@
          <div class="loading"></div>
     </div>
 	  
-    <div id="buy1"> <button id="ARworld1" onclick="window.location.href='pay.html#reebok'" target="_blank">One Tap Payment</button></div>
-    <div id="buy2"> <button id="ARworld2" onclick="window.location.href='pay.html#sneakers'" target="_blank">Purchase Sneakers</button></div>
-    <div id="buy3"> <button id="ARworld3" onclick="window.location.href='pay.html#iphone'" target="_blank">Purchase iPhone</button></div>
+    <div id="buy1"> <button id="ARworld1" onclick="window.open('pay.html#reebok')">Purchase Football</button></div>
+    <div id="buy2"> <button id="ARworld2" onclick="window.open('pay.html#sneakers')">Purchase Sneakers</button></div>
+    <div id="buy3"> <button id="ARworld3" onclick="window.open('pay.html#iphone')">Purchase iPhone</button></div>
 
 	  
     <div id="landing">
@@ -105,7 +109,7 @@
         <button id="ARworld" onclick="document.body.removeChild(this.parentNode)">Enter the AR world</button>
     </div>  
 	  	  
-    <a-scene arjs="debugUIEnabled: false" embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector renderer="gammaOutput: true" id="scene">
+    <a-scene arjs="debugUIEnabled: false" embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector loading-screen="dotsColor: white; backgroundColor: black" renderer="gammaOutput: true" id="scene">
          
          <a-assets>
               <a-asset-item id="football" src=football/scene.gltf></a-asset-item>
@@ -118,7 +122,7 @@
 			  animation__y-axis="property: position; begin: footballAnimation; from: 0 -5 0; to: 0 0 0; dur: 5000; easing: easeInOutQuint">
                </a-entity>
                <a-entity gltf-model="#projector" position="0 -3 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-               <a-text id="text-animation1" value="adidas" font="fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
+               <a-text id="text-animation1" value="adidas" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
 		       	  animation__y-axis="property: position; startEvents: textAnimation1; from: 0 5 -0.6; to: 0 -1.5 -0.6; dur: 5000; easing: easeInOutQuint">
                </a-text>
 	 
@@ -135,7 +139,7 @@
 			  animation__y-axis="property: position; begin: reebokAnimation; from: 0 -5 0; to: 0 -0.4 0; dur: 5000; easing: easeInOutQuint">
 	       </a-entity>
                <a-entity gltf-model="#projector" position="0 -3 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-               <a-text id="text-animation2" value="reebok" font="fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
+               <a-text id="text-animation2" value="reebok" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
 		       	  animation__y-axis="property: position; startEvents: textAnimation2; from: 0 5 -0.6; to: 0 -1.5 -0.6; dur: 5000; easing: easeInOutQuint">
                </a-text>
        </a-marker>  
@@ -151,7 +155,7 @@
 			  animation__y-axis="property: position; begin: iphoneAnimation; from: 0.1 -5 0; to: 0.1 0 0; dur: 5000; easing: easeInOutQuint" >
                </a-entity></a-entity>
                <a-entity gltf-model="#projector" position="0 -3 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
-               <a-text id="text-animation3" value="apple" font="fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.9 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text
+               <a-text id="text-animation3" value="apple" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.9 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text
 		          animation__y-axis="property: position; startEvents: textAnimation3; from: 0 5 -0.6; to: 0 -1.9 -0.6; dur: 5000; easing: easeInOutQuint">
                </a-text>
        </a-marker>
